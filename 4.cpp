@@ -1,5 +1,6 @@
 #include <iostream>
-#include <cstdlib>
+#include <vector>
+#include <random>
 
 class BaseList {
 protected:
@@ -16,7 +17,7 @@ public:
 
     void Print() {
         for (int i = 0; i < Count(); i++) {
-            std::cout << (*this)[i];
+            std::cout << (*this)[i] << " ";
         }
         std::cout << std::endl;
     }
@@ -32,7 +33,6 @@ public:
     }
 
     virtual void Sort() {
-        // Bubble sort implementation
         bool swapped;
         for (int i = 0; i < Count() - 1; i++) {
             swapped = false;
@@ -96,7 +96,7 @@ public:
     }
 
     void Add(int a) override {
-        if (count >= Length - 1) {
+        if (count >= Length) {
             Length *= 2;
             int* newbuf = new int[Length];
             std::copy(buf, buf + count, newbuf);
