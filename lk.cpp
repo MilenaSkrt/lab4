@@ -453,3 +453,86 @@ int main() {
     return 0;
 }
 //виртуальный метод дублирование всех элементов , абстрактный в базовом классе и переопределен в обоих наследниках
+
+class TestDuplicateAll : public Tester {
+public:
+    static void Test() {
+        ArrList* arrList = new ArrList();
+        ChainList* chainList = new ChainList();
+
+        arrList->Add(1);
+        arrList->Add(2);
+        arrList->Add(3);
+
+        chainList->Add(1);
+        chainList->Add(2);
+        chainList->Add(3);
+
+        std::cout << "Array list before duplication: " << std::endl;
+        arrList->Print();
+        arrList->DuplicateAll();
+        std::cout << "Array list after duplication: " << std::endl;
+        arrList->Print();
+
+        std::cout << "Chain list before duplication: " << std::endl;
+        chainList->Print();
+        chainList->DuplicateAll();
+        std::cout << "Chain list after duplication: " << std::endl;
+        chainList->Print();
+
+        delete arrList;
+        delete chainList;
+    }
+};
+
+int main() {
+    // Тестирование обычных операций
+    Tester::Test();
+
+    std::cout << "***TESTING DUPLICATEALL***" << std::endl;
+    // Тестирование метода DuplicateAll
+    TestDuplicateAll::Test();
+
+    return 0;
+}
+class TestDuplicateAll : public Tester {
+public:
+    static void Test() {
+        ArrList* arrList = new ArrList();
+        ChainList* chainList = new ChainList();
+
+        arrList->Add(1);
+        arrList->Add(2);
+        arrList->Add(3);
+
+        chainList->Add(1);
+        chainList->Add(2);
+        chainList->Add(3);
+
+        std::cout << "Array list before duplication: " << std::endl;
+        arrList->Print();
+        arrList->DuplicateAll();
+        std::cout << "Array list after duplication: " << std::endl;
+        arrList->Print();
+
+        std::cout << "Chain list before duplication: " << std::endl;
+        chainList->Print();
+        chainList->DuplicateAll();
+        std::cout << "Chain list after duplication: " << std::endl;
+        chainList->Print();
+
+        delete arrList;
+        delete chainList;
+    }
+};
+
+int main() {
+    // Тестирование обычных операций
+    Tester::Test();
+
+    std::cout << "***TESTING DUPLICATEALL***" << std::endl;
+    // Тестирование метода DuplicateAll
+    TestDuplicateAll::Test();
+
+    return 0;
+}
